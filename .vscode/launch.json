@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "learn",
+            "request": "launch",
+            "mainClass": "day01.learn",
+            "projectName": "Java_5a979ecb"
+        },
+        {
+            "type": "java",
+            "name": "day01",
+            "request": "launch",
+            "mainClass": "day01.day01",
+            "projectName": "Java_5a979ecb"
+        },
+        {
+            "type": "java",
+            "name": "learn",
+            "request": "launch",
+            "mainClass": "Day01.learn",
+            "projectName": "Java_5a979ecb"
+        },
+        {
+            "type": "java",
+            "name": "learn",
+            "request": "launch",
+            "mainClass": "learn.learn",
+            "projectName": "Java_5a979ecb"
+        },
+        {
+            "type": "java",
+            "name": "dayone",
+            "request": "launch",
+            "mainClass": "day1.dayone",
+            "projectName": "Java_5a979ecb"
+        },
+        {
+            "type": "java",
+            "name": "day1",
+            "request": "launch",
+            "mainClass": "day1.day1",
+            "projectName": "Java_5a979ecb"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
