@@ -8,6 +8,13 @@
             "type": "java",
             "name": "learn",
             "request": "launch",
+            "mainClass": "day04.learn",
+            "projectName": "Java_5a979ecb"
+        },
+        {
+            "type": "java",
+            "name": "learn",
+            "request": "launch",
             "mainClass": "day01.learn",
             "projectName": "Java_5a979ecb"
         },
