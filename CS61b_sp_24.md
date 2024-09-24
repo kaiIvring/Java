@@ -20,3 +20,7 @@ Non-static:针对**具体的对象**，"invoke using an **instance name**,e.g. m
 
 ___
 
+
+
+## Lecture 3 - Lists Ⅰ References Recursion and Lists
+
