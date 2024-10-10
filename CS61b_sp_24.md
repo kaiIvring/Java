@@ -8,8 +8,6 @@
 
 ___
 
-
-
 ## Lecture 2 - Defining and Using Classes
 
 Static and Non-static method:
@@ -19,8 +17,6 @@ static:针对**“全体”**，"invoke using the **class name**,e.g. Dog.makeNo
 Non-static:针对**具体的对象**，"invoke using an **instance name**,e.g. maya.makeNoise" --> instance methods
 
 ___
-
-
 
 ## Lecture 3 - Lists Ⅰ References, Recursion, and Lists
 
@@ -32,8 +28,18 @@ Primitive类型的变量创建时存放的**就是变量具体的值**；Referen
 
 ___
 
-## Lecture 4 - List Ⅱ: SLLists
+## Lecture 4 - List Ⅱ: SLLists(singly linked list)
 
 **Access control**: public and private
 
 public变量或方法允许用户使用和更改，private则不允许，但不起到保护作用（还是有可能“被攻击”) (用户无需在意private部分) --> 类比：public就像车的方向盘，油门... ; private就像车的发动机，内部线路之类的.
+
+___
+
+## Lecture 5 - List Ⅲ: DLLists and Arrays(doubly linked list)
+
+泛型:`public class SLList <pineapple>`尖括号内为占位符，可以是任意字母，后续代码引用时将其替换为具体数据类型即可
+
+Array也是引用类型，创建一个4x4的二维数组时实际上创建了五个“引用”，一个指向“主数组”，后四个由“主数组”的四个空间分别指向四个“子数组”
+___
+
