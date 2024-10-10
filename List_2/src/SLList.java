@@ -1,13 +1,14 @@
-public class SLList {
+/* <pineapple> -> placeholder, 占位符，允许用户修改具体类型, 或称为泛型*/
+public class SLList<pineapple> {
 
     /* if the nested class never uses any instance variables or methods
     of the outer class,declare it static
      */
-    private static class IntNode { // nested class 嵌套类
-        public int item;
+    private class IntNode { // nested class 嵌套类
+        public pineapple item;
         public IntNode next;
 
-        public IntNode (int i, IntNode n) {
+        public IntNode (pineapple i, IntNode n) {
             item = i;
             next = n;
         }
@@ -18,31 +19,31 @@ public class SLList {
     private int size;
 
     /* Creates a new SLLists with one item, namely x. */
-    public SLList (int x) {
-        sentinel = new IntNode(0,null);
+    public SLList (pineapple x) {
+        sentinel = new IntNode(null,null);
         sentinel.next = new IntNode(x, null);
         size = 1;
     }
 
     /* Creates an empty list */
     public SLList () {
-        sentinel = new IntNode(0,null);
+        sentinel = new IntNode(null,null);
         size = 0;
     }
 
     /* Adds item x to the front of the list. */
-    public void addFirst (int x) {
+    public void addFirst (pineapple x) {
         sentinel.next = new IntNode(x, sentinel.next);
         size += 1;
     }
 
     /* Returns the first item of the list */
-    public int getFirst() {
+    public pineapple getFirst() {
         return sentinel.next.item;
     }
 
     /* Adds item x to the end of list*/
-    public void addLast (int x) {
+    public void addLast (pineapple x) {
         size += 1;
         IntNode p = sentinel;
         while (p.next != null) {
@@ -79,9 +80,9 @@ public class SLList {
     }
 
     public static void main(String[] args) {
-        SLList L = new SLList(5);
-        L.addFirst(10);
-        L.addLast(20);
+        SLList<String> L = new SLList<String>("hello");
+        L.addFirst("Java");
+        L.addLast("happy");
         int size = L.getSize();
         int size1 = L.size();
         int size2 = L.recurseGetSize();
