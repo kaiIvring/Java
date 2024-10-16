@@ -43,3 +43,9 @@ ___
 Array也是引用类型，创建一个4x4的二维数组时实际上创建了五个“引用”，一个指向“主数组”，后四个由“主数组”的四个空间分别指向四个“子数组”
 ___
 
+## Lecture 6 - Testing
+
+## write tests before write codes
+
+___
+
