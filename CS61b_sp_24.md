@@ -49,3 +49,16 @@ ___
 
 ___
 
+## Lecture 7 - List  Ⅳ:Arrays and Lists
+
+**Mian idea**:用数组(Array)创建一个列表(List), i.e. AList(Array_List)
+
+
+数组中的泛型:Java不允许实例化泛型类型的数组(instantiate arrays of generic types):
+```java
+apple[] a = (apple[]) new Object[size + 1];
+```
+对于泛型类型的数组，当我们希望removeLast时，确实需要将最后一个元素设置为null，因为此时若不将其设为null那么Java认为我们仍保留对该元素的"reference",也就不会将该元素回收.
+
+___
+
