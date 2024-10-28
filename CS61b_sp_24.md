@@ -18,7 +18,7 @@ Non-static:针对**具体的对象**，"invoke using an **instance name**,e.g. m
 
 ___
 
-## Lecture 3 - Lists Ⅰ References, Recursion, and Lists
+## Lecture 3 - Lists1 References, Recursion, and Lists
 
 Primitive types : byte, short, int, long, float, double, boolen, char
 
@@ -28,7 +28,7 @@ Primitive类型的变量创建时存放的**就是变量具体的值**；Referen
 
 ___
 
-## Lecture 4 - List Ⅱ: SLLists(singly linked list)
+## Lecture 4 - List2 SLLists(singly linked list)
 
 **Access control**: public and private
 
@@ -36,7 +36,7 @@ public变量或方法允许用户使用和更改，private则不允许，但不�
 
 ___
 
-## Lecture 5 - List Ⅲ: DLLists and Arrays(doubly linked list)
+## Lecture 5 - List3 DLLists and Arrays(doubly linked list)
 
 泛型:`public class SLList <pineapple>`尖括号内为占位符，可以是任意字母，后续代码引用时将其替换为具体数据类型即可
 
@@ -49,7 +49,7 @@ ___
 
 ___
 
-## Lecture 7 - List  Ⅳ:Arrays and Lists
+## Lecture 7 - List4 Arrays and Lists
 
 **Mian idea**:用数组(Array)创建一个列表(List), i.e. AList(Array_List)
 
@@ -61,4 +61,41 @@ apple[] a = (apple[]) new Object[size + 1];
 对于泛型类型的数组，当我们希望removeLast时，确实需要将最后一个元素设置为null，因为此时若不将其设为null那么Java认为我们仍保留对该元素的"reference",也就不会将该元素回收.
 
 ___
+
+## Lecture 8 - Inheritance 1:Interface and Implementation Inheritance
+
+## Interface(接口):可以看作是一类东西的上位词，用于定义一组方法规范（签名），而不实现这些方法的具体内容。
+在具体的类中实现接口中定义的功能(继承)：
+```java
+public interface List61B<apple>
+public class AList<apple> implements List61B<apple>
+```
+
+## Override and Overload
+Override(重写):"子类对父类方法的重新定义",重写时，方法名和参数类型一致
+Overload(重载):指同一类中定义多个具有相同名称但参数不同的方法，使用不同的参数调用不同的方法
+
+## default mode
+在接口中使用default关键词可以在接口中利用其他方法实现一个带有具体代码的方法，并且该方法在其子类中无需重写即可使用.同时，也可以在子类中Override父类提供的这一个default方法
+
+## Static and Dynamic type
+static type(a.k.a compile-time type):变量编译时确定的类型，通常是声明变量时指定的类型
+dynamic type(a.k.a run-time type):在运行时实际引用的对象类型
+```java
+Animal animal = new Dog();
+```
+上述代码中，Dog是动态类型，Animal是静态类型
+
+**dynamic method selection**:如果动态类型重写了，使用动态类型的重写方法
+
+静态类型用于编译时的类型检查，动态类型决定了实际调用的方法
+
+## Summary
+**Interface Inheritance**:只是说明这个接口对应的类能做什么，不包含具体的实现 a.k.a what.
+**Implementation Inheritance**:即，default mode 保含具体的实现 a.k.a how
+**关键在于理解interface是一种"is-a"关系，例如："AList is a List61B","small dog is a dog"...**
+
+___
+
+
 
