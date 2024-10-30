@@ -92,10 +92,51 @@ Animal animal = new Dog();
 
 ## Summary
 **Interface Inheritance**:只是说明这个接口对应的类能做什么，不包含具体的实现 a.k.a what.
-**Implementation Inheritance**:即，default mode 保含具体的实现 a.k.a how
+**Implementation Inheritance**:即，default mode 保含具体的实现 a.k.a how(不算严格的implementation inheritance)
 **关键在于理解interface是一种"is-a"关系，例如："AList is a List61B","small dog is a dog"...**
 
 ___
 
+## Lecture 9 - Inheritance 2:Extends,Casting,Higher Order Functions
 
+## extends:Implementation Inheritance
+继承某个类，而不是接口,且可在此类的基础上添加其他方法,当然也可重写继承类中的方法
+super关键词，用来访问父类中的方法：
+```java
+apple x = super.removeLast();
+```
+## Constructor Behavior
+在extend的子类中使用构建函数时会默认调用父类中的默认构造函数(无参数)(因为一个类中可能有多个构建函数，若需要调用特定构造函数->使用super关键词)
+```java
+public VengefulSLList() {
+   deletedItems = new SLList<Item>();
+}
+
+public VengefulSLList() {
+   super();
+   deletedItems = new SLList<Item>();
+}
+```
+上述代码展示了默认调用父类构建函数的情况，两个构建函数是等价的
+
+## Encapsulation(封装):
+将对象的属性和方法捆绑在一起，并对外部隐藏内部实现的细节，只暴露有限的接口
+
+## Cast(映射，转换)
+改变compile-time type：
+```java
+(poodle) maxDog(frank, frankJr)
+```
+上述代码将maxDog的返回类型转换为poodle(dog的子类)
+
+## higher order functions
+利用接口实现类似函数调用的功能:
+用一个类继承一个接口，接口中内容相当于函数声明，类中相当于函数实现，在高阶函数实现类中以接口类型来表示函数，调用时新建"函数实现类"
+```java
+public static int doTwice(IntUnaryFunction f, int x){
+...
+}
+int result = doTwice(new TenX(), 2);
+```
+___
 
