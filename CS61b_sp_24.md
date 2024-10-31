@@ -140,3 +140,11 @@ int result = doTwice(new TenX(), 2);
 ```
 ___
 
+## Lecture 10 - Inheritance_3:Subtype Polymorphism,Comparators,Comparable
+ 
+## Subtype Polymorphism(子类型多态性):
+通过父类或接口来使用其子类对象的多态性机制
+
+## Comparable:用于定义对象的**自然顺序**,实现该类的接口可以将自己与其他同类对象进行比较
+
+## Comparator:用于创建自定义的排序顺序
