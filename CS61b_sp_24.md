@@ -147,4 +147,28 @@ ___
 
 ## Comparable:用于定义对象的**自然顺序**,实现该类的接口可以将自己与其他同类对象进行比较
 
+___
+
+## Lecture 11 - Inheritance_4:Iterators,Object Methods
+
+## Iterators
+### The Enhanced For Loop
+
+## Object Methods
+### toSting
+```java
+System.out.println(x);
+x.toString;
+```
+第一行代码实际上是调用第二行代码
+### "==" vs .equals()
+"==":比较变量的比特位,"golden rule of equals",对于reference type,比较的是两个变量是否指向同一个地址.
+.equals():equality in the sense that we usually mean it.
+*this*:表示调用当前方法的变量
+```java
+o instanceof Dog uddaDog
+```
+上述代码判断o是否是Dog类，若否则返回false，若是,则返回true并将o映射为uddaDog(将o改名为uddaDog)
+
+___
 
