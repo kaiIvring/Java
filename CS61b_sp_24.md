@@ -81,6 +81,7 @@ Overload(重载):指同一类中定义多个具有相同名称但参数不同的
 ## Static and Dynamic type
 static type(a.k.a compile-time type):变量编译时确定的类型，通常是声明变量时指定的类型
 dynamic type(a.k.a run-time type):在运行时实际引用的对象类型
+赋值时看的是static type.
 ```java
 Animal animal = new Dog();
 ```
@@ -123,7 +124,18 @@ public VengefulSLList() {
 将对象的属性和方法捆绑在一起，并对外部隐藏内部实现的细节，只暴露有限的接口
 
 ## Cast(映射，转换)
-改变compile-time type：
+改变compile-time type(static type):
+*父类不能cast为子类，除非父类具有子类的动态类型*
+```java
+Animal a = new Animal();
+Dog d = new Dog();
+d = (Dog) a; // runtime error (compiler think it is ok, however the dynamic type does not match)
+
+Animal b = new Dog();
+Dog d1 = new Dog();
+d1 = (Dog) b; // cast b(animal) to dog
+```
+
 ```java
 (poodle) maxDog(frank, frankJr)
 ```
@@ -151,6 +163,11 @@ ___
 
 ## Lecture 11 - Inheritance_4:Iterators,Object Methods
 
+## exception
+throw an exception
+```java
+throw new exceptionName("exception content");
+```
 ## Iterators
 ### The Enhanced For Loop
 
@@ -164,7 +181,9 @@ x.toString;
 ### "==" vs .equals()
 "==":比较变量的比特位,"golden rule of equals",对于reference type,比较的是两个变量是否指向同一个地址.
 .equals():equality in the sense that we usually mean it.
+
 *this*:表示调用当前方法的变量
+
 ```java
 o instanceof Dog uddaDog
 ```
