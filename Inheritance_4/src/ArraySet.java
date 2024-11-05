@@ -12,6 +12,9 @@ public class ArraySet<T> implements Iterable<T> {
     }
 
     public void add(T x) {
+        if (x == null) {
+            throw new IllegalArgumentException("can't add null");// throw an exception
+        }
         if (contains(x)) {
             return;
         }
@@ -96,6 +99,7 @@ public class ArraySet<T> implements Iterable<T> {
 
     public static void main(String[] args) {
         ArraySet<Integer> S = new ArraySet<>();
+        // S.add(null);
         S.add(2);
         S.add(33);
         S.add(92);
