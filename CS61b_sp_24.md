@@ -191,3 +191,15 @@ o instanceof Dog uddaDog
 
 ___
 
+## Lecture 12 - Asymptotics_1
+
+## order of growth(增长阶)
+一个用于描述算法性能或函数增长速度的术语
+big Theta:oog is f(n)
+big O:oog is less than or equal to f(n) (greatest) 
+big Omega:oog is greater than or equal to f(n) (least)
+(时间复杂度)
+
+___
+
+
