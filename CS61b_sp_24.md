@@ -12,10 +12,11 @@ ___
 
 Static and Non-static method:
 
-static:针对**“全体”**，"invoke using the **class name**,e.g. Dog.makeNoise" --> Class methods
+static:针对**“类”**，"invoke using the **class name**,e.g. Dog.makeNoise" --> Class methods
+属于类本身，可以直接通过类名调用，只能访问静态成员变量和静态方法(静态方法不依赖任何实例)
 
 Non-static:针对**具体的对象**，"invoke using an **instance name**,e.g. maya.makeNoise" --> instance methods
-
+属于类的实例，只能通过对象(实例)来调用，可以访问静态和非静态成员变量以及方法(非静态方法可以访问当前对象的所有属性和方法)
 ___
 
 ## Lecture 3 - Lists1 References, Recursion, and Lists
@@ -202,4 +203,17 @@ big Omega:oog is greater than or equal to f(n) (least)
 
 ___
 
+## Lecture 13 - Ask Anything:Midterm 1
 
+## DMS(dynamic method selection):
+1. 方法调用时，编译器会根据变量的静态类型来判断是否可以调用某个方法
+2. 方法的具体执行（即运行时的绑定）则是基于变量的动态类型。也就是说，即使静态类型中有该方法，最终调用的还是动态类型中对应的方法版本
+3. 方法调用看静态类型，具体执行时看有没有动态类型重写
+
+## public & private
+General Java philosophy:consciously restrict what you're allowed to do as much as possible.
+
+## Nested class
+Static Nested Class
+Non-static Nested Class(Inner Class) a.k.a 内部类
+similar to static and non-static function
