@@ -94,7 +94,7 @@ Animal animal = new Dog();
 
 ## Summary
 **Interface Inheritance**:只是说明这个接口对应的类能做什么，不包含具体的实现 a.k.a what.
-**Implementation Inheritance**:即，default mode 保含具体的实现 a.k.a how(不算严格的implementation inheritance)
+**Implementation Inheritance**:即，default mode 包含具体的实现 a.k.a how(不算严格的implementation inheritance)
 **关键在于理解interface是一种"is-a"关系，例如："AList is a List61B","small dog is a dog"...**
 
 ___
@@ -145,6 +145,7 @@ d1 = (Dog) b; // cast b(animal) to dog
 ## higher order functions
 利用接口实现类似函数调用的功能:
 用一个类继承一个接口，接口中内容相当于函数声明，类中相当于函数实现，在高阶函数实现类中以接口类型来表示函数，调用时新建"函数实现类"
+
 ```java
 public static int doTwice(IntUnaryFunction f, int x){
 ...
@@ -154,11 +155,18 @@ int result = doTwice(new TenX(), 2);
 ___
 
 ## Lecture 10 - Inheritance_3:Subtype Polymorphism,Comparators,Comparable
- 
+
 ## Subtype Polymorphism(子类型多态性):
 通过父类或接口来使用其子类对象的多态性机制
 
-## Comparable:用于定义对象的**自然顺序**,实现该类的接口可以将自己与其他同类对象进行比较
+## Comparable:
+用于定义类的**自然顺序**,通常是类的默认排序
+实现该类的接口可以将自己与其他同类对象进行比较，必须定义compareTo方法
+
+## Comparator
+为类定义额外的排序方法，通常为自定义的排序方法
+实现方法：创建一个继承Comparator接口的类，并定义compare方法
+一个比较器，可以将两个元素进行比较
 
 ___
 
@@ -188,7 +196,7 @@ x.toString;
 ```java
 o instanceof Dog uddaDog
 ```
-上述代码判断o是否是Dog类，若否则返回false，若是,则返回true并将o映射为uddaDog(将o改名为uddaDog)
+上述代码判断o是否是Dog类，若否则返回false，若是,则返回true并将o映射为Dog(并将o改名为uddaDog)
 
 ___
 
@@ -196,10 +204,11 @@ ___
 
 ## order of growth(增长阶)
 一个用于描述算法性能或函数增长速度的术语
-big Theta:oog is f(n)
-big O:oog is less than or equal to f(n) (greatest) 
-big Omega:oog is greater than or equal to f(n) (least)
+big Theta (Θ) :oog is f(n) (准确增长速率)
+big O (O) :oog is less than or equal to f(n) (greatest) (上界)
+big Omega (Ω) :oog is greater than or equal to f(n) (least) (下界)
 (时间复杂度)
+f(n)表示算法的运行时间
 
 ___
 
